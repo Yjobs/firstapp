@@ -47,8 +47,10 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: firstapp_production
-  username: firstapp
-  password: <%= ENV['FIRSTAPP_DATABASE_PASSWORD'] %>
+
+  production:
+    adapter: postgresql
+    encoding: unicode
+    database: postgres://rwruuhucdiulrp:161090345d8bb5fe6aba2548d2f56ecf3d4df13e9d4b22882220211263b78593@ec2-54-163-252-55.compute-1.amazonaws.com:5432/detiqoiif9dv6i
+    pool: 5
+    timeout: 5000
